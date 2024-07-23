@@ -21,17 +21,18 @@ A complete Guide to Install Frappe Bench in Windows 11 Using Docker and install 
 
 ### STEP 3
 
-   Copy example devcontainer config from 
-    
-    devcontainer-example folder to .devcontainer folder
-    
-   Copy example vscode config for devcontainer from 
-    
-    development/vscode-example folder to development/.vscode folder
+   Copy example devcontainer config from ```devcontainer-example``` folder to ```.devcontainer``` folder
 
-   On MaccOS with M1 or M2:
+    cp -r devcontainer-example .devcontainer
+    
+   Copy example vscode config for devcontainer from ```development/vscode-example``` folder to ```development/.vscode``` folder
 
-    Edit .devcontainer/docker-compose.yml and change linux/amd64 platforms to linux/arm64
+    cp -r development/vscode-example development/.vscode
+
+   On MaccOS with M1 or M2: Edit ```.devcontainer/docker-compose.yml``` and change ```linux/amd64``` platforms to ```linux/arm64```
+
+    mv .devcontainer/docker-compose.yml .devcontainer/docker-compose.yml.ORIG
+    sed -e "s;linux/amd64;linux/arm64;g" .devcontainer/docker-compose.yml.ORIG > .devcontainer/docker-compose.yml
    
 ### STEP 4 Install VSCode Remote Containers extension
     
