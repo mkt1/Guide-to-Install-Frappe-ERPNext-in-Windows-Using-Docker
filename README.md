@@ -31,7 +31,7 @@ A complete Guide to Install Frappe Bench in Windows 11 Using Docker and install 
 
    On MaccOS with M1 or M2:
 
-    Edit ```.devcontainer/docker-compose.yml``` and change ```linux/amd64 platforms``` to ```linux/arm64```
+    Edit .devcontainer/docker-compose.yml and change linux/amd64 platforms to linux/arm64
    
 ### STEP 4 Install VSCode Remote Containers extension
     
@@ -103,6 +103,6 @@ A complete Guide to Install Frappe Bench in Windows 11 Using Docker and install 
     
     bench start
     
-  You can now login with user Administrator and the password you choose when creating the site. Your website will now be accessible at location d-code.localhost:8000
+  You can now login with user Administrator and the password you choose when creating the site. Your website will now be accessible at location http://d-code.localhost:8000
     
    
