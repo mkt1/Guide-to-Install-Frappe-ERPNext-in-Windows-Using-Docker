@@ -28,6 +28,10 @@ A complete Guide to Install Frappe Bench in Windows 11 Using Docker and install 
    Copy example vscode config for devcontainer from 
     
     development/vscode-example folder to development/.vscode folder
+
+   On MaccOS with M1 or M2:
+
+    Edit ```.devcontainer/docker-compose.yml``` and change ```linux/amd64 platforms``` to ```linux/arm64```
    
 ### STEP 4 Install VSCode Remote Containers extension
     
@@ -50,7 +54,7 @@ A complete Guide to Install Frappe Bench in Windows 11 Using Docker and install 
    Node v14 and v10 are installed. Check with nvm ls. Node v14 is used by default.
                 
     
-### STEP 6 Initilase frappe bench with frappe version 14 and Switch directory
+### STEP 6 Initialize frappe bench with frappe version 14 and Switch directory
 
     
     bench init --skip-redis-config-generation --frappe-branch version-14 frappe-bench
