@@ -107,3 +107,12 @@ A complete Guide to Install Frappe Bench in Windows 11 Using Docker and install 
   You can now login with user Administrator and the password you choose when creating the site. Your website will now be accessible at location http://d-code.localhost:8000
     
    
+## Skripte
+docker exec -it frappe_docker_devcontainer-mariadb-1 mysql -u root -p
+use _cdcee8592cecafa4
+SELECT name, script, script_type FROM `tabServer Script`;
+# , name , creation , modified , modified_by , owner , docstatus , idx , script_type , reference_doctype , event_frequency , cron_format , doctype_event , api_method , allow_guest , module , disabled , script , _user_tags , _comments , _assign , _liked_by ,
+SELECT name , creation , modified , modified_by , owner , ref_doctype , docname, data FROM `tabVersion` WHERE ref_doctype = 'Server Script';
+# , name , creation , modified , modified_by , owner , docstatus , idx , ref_doctype , docname , data , _user_tags , _comments , _assign , _liked_by ,
+
+exit;
